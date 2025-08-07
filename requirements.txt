@@ -1,6 +1,5 @@
 streamlit
 spotipy
 pandas
-pickle
+numpy
 scikit-learn
-gdown
