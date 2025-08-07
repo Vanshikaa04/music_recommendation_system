@@ -12,8 +12,8 @@ DF_FILE_ID = '1YrIpnVZzoeGtPl257ihH0ibEvz2FupT7'
 SIMILARITY_FILE_ID = '1bRfyN6LyrZxI6-zi2quC9UxTYnrVU1AW'
 
 # Spotify API credentials
-CLIENT_ID = "fc322433e3e7478785cdfc32775b77d1"
-CLIENT_SECRET = "df79b11fb3564225b8fa143738a5121d"
+CLIENT_ID = st.secrets["spotify"]["client_id"]
+CLIENT_SECRET = st.secrets["spotify"]["client_secret"]
 
 # -------------------- FILE DOWNLOAD --------------------
 
