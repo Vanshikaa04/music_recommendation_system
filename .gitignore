@@ -1,0 +1,25 @@
+# Virtual environment
+musiceniv/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Cache folders
+.cache/
+.cache
+
+# Streamlit specific
+.streamlit/config.toml
+.streamlit/secrets.toml  # if using secrets
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+df.pkl
+similarity.pkl
+spotify_millsongdata.csv
