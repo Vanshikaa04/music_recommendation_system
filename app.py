@@ -8,8 +8,8 @@ import os
 # -------------------- SETTINGS --------------------
 
 # Replace these with your actual Google Drive file IDs
-DF_FILE_ID = 'YOUR_DF_FILE_ID_HERE'
-SIMILARITY_FILE_ID = 'YOUR_SIMILARITY_FILE_ID_HERE'
+DF_FILE_ID = 'https://drive.google.com/file/d/1YrIpnVZzoeGtPl257ihH0ibEvz2FupT7/view?usp=drive_link'
+SIMILARITY_FILE_ID = 'https://drive.google.com/file/d/1bRfyN6LyrZxI6-zi2quC9UxTYnrVU1AW/view?usp=drive_link'
 
 # Spotify API credentials (from Spotify Developer Dashboard)
 CLIENT_ID = "fc322433e3e7478785cdfc32775b77d1"
