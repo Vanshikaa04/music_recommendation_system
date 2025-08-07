@@ -7,11 +7,11 @@ import os
 
 # -------------------- SETTINGS --------------------
 
-# Replace these with your actual Google Drive file IDs
-DF_FILE_ID = 'https://drive.google.com/file/d/1YrIpnVZzoeGtPl257ihH0ibEvz2FupT7/view?usp=drive_link'
-SIMILARITY_FILE_ID = 'https://drive.google.com/file/d/1bRfyN6LyrZxI6-zi2quC9UxTYnrVU1AW/view?usp=drive_link'
+# Google Drive File IDs only
+DF_FILE_ID = '1YrIpnVZzoeGtPl257ihH0ibEvz2FupT7'
+SIMILARITY_FILE_ID = '1bRfyN6LyrZxI6-zi2quC9UxTYnrVU1AW'
 
-# Spotify API credentials (from Spotify Developer Dashboard)
+# Spotify API credentials
 CLIENT_ID = "fc322433e3e7478785cdfc32775b77d1"
 CLIENT_SECRET = "df79b11fb3564225b8fa143738a5121d"
 
@@ -39,13 +39,15 @@ client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 def get_song_album_cover_url(song_name, artist_name):
-    search_query = f"track:{song_name} artist:{artist_name}"
-    results = sp.search(q=search_query, type="track")
-    if results and results["tracks"]["items"]:
-        track = results["tracks"]["items"][0]
-        return track["album"]["images"][0]["url"]
-    else:
-        return "https://i.postimg.cc/0QNxYz4V/social.png"  # Default image
+    try:
+        search_query = f"track:{song_name} artist:{artist_name}"
+        results = sp.search(q=search_query, type="track")
+        if results and results["tracks"]["items"]:
+            track = results["tracks"]["items"][0]
+            return track["album"]["images"][0]["url"]
+    except:
+        pass
+    return "https://i.postimg.cc/0QNxYz4V/social.png"  # Fallback image
 
 # -------------------- RECOMMENDER FUNCTION --------------------
 
